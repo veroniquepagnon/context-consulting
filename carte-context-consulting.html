@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context Consulting · Véronique Pagnon</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #faf7f4;
+      color: #2c1810;
+      padding: 40px 24px;
+    }
+
+    .card {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .page-break {
+      border: none;
+      border-top: 2px dashed #e0d4c4;
+      margin: 48px 0;
+    }
+
+    .label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #5c1a2e;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .divider-gold {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #b8973a, transparent);
+      margin-bottom: 22px;
+    }
+
+    .divider-light {
+      width: 50%;
+      height: 1px;
+      background-color: #e0d4c4;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: clamp(20px, 3.5vw, 30px);
+      font-weight: normal;
+      color: #5c1a2e;
+      text-align: center;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: #b8973a;
+    }
+
+    h2 {
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: normal;
+      color: #5c1a2e;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .intro {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      color: #4a3030;
+      text-align: center;
+      line-height: 1.7;
+      margin: 12px 0 16px;
+    }
+
+    .subtitle {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      color: #9a7060;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .situations {
+      background-color: #f5ece4;
+      border-left: 3px solid #b8973a;
+      border-radius: 0 4px 4px 0;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+    }
+
+    .situations-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #b8973a;
+      margin-bottom: 10px;
+    }
+
+    .situations ul { list-style: none; }
+
+    .situations ul li {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      color: #4a3030;
+      padding: 4px 0 4px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .situations ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #b8973a;
+    }
+
+    .promise {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12.5px;
+      color: #4a3030;
+      text-align: center;
+      line-height: 1.75;
+      margin: 0 0 18px;
+      font-style: italic;
+    }
+
+    /* OFFER BOX */
+    .offer-box {
+      background-color: #5c1a2e;
+      border-radius: 6px;
+      padding: 28px 28px 24px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .offer-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c8a96e;
+      margin-bottom: 8px;
+    }
+
+    .offer-price-center {
+      font-family: 'Georgia', serif;
+      font-size: 36px;
+      color: #fdf8f2;
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+
+    .duration-main {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      color: #c8a96e;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .details { list-style: none; text-align: left; }
+
+    .details li {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      color: #e8d8c8;
+      padding: 6px 0 6px 18px;
+      border-bottom: 1px solid #4a1224;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .details li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #c8a96e;
+    }
+
+    /* PROGRAMME TEASER */
+    .programme-teaser {
+      background-color: #f0e8de;
+      border-left: 3px solid #b8973a;
+      border-radius: 0 4px 4px 0;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+    }
+
+    .programme-teaser .prog-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b8973a;
+      margin-bottom: 6px;
+    }
+
+    .programme-teaser p {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12.5px;
+      color: #4a3030;
+      line-height: 1.6;
+    }
+
+    /* LINKS */
+    .links {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .links p {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      color: #5c1a2e;
+      line-height: 2.2;
+    }
+
+    .footer {
+      border-top: 1px solid #e0d4c4;
+      padding-top: 12px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9.5px;
+      color: #b0a090;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* PAGE 2 */
+    .compare-block {
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+
+    .compare-block.dark { background-color: #5c1a2e; }
+    .compare-block.light { background-color: #f5ece4; border-left: 3px solid #b8973a; border-radius: 0 4px 4px 0; }
+
+    .compare-head {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .compare-block.dark .compare-head { color: #c8a96e; }
+    .compare-block.light .compare-head { color: #b8973a; }
+
+    .compare-price {
+      font-family: 'Georgia', serif;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .compare-block.dark .compare-price { color: #fdf8f2; }
+    .compare-block.light .compare-price { color: #5c1a2e; }
+
+    .compare-subtitle {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 11px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .compare-block.dark .compare-subtitle { color: #c8a96e; }
+    .compare-block.light .compare-subtitle { color: #9a7060; }
+
+    .compare-body {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12.5px;
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+
+    .compare-block.dark .compare-body { color: #e8d8c8; }
+    .compare-block.light .compare-body { color: #4a3030; }
+
+    .compare-items { list-style: none; margin-bottom: 10px; }
+
+    .compare-items li {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      padding: 3px 0 3px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .compare-block.dark .compare-items li { color: #e8d8c8; }
+    .compare-block.light .compare-items li { color: #4a3030; }
+
+    .compare-items li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #b8973a;
+    }
+
+    .compare-result {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .compare-block.dark .compare-result { color: #e8d8c8; }
+    .compare-block.light .compare-result { color: #4a3030; }
+
+    .compare-note {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 11px;
+      font-style: italic;
+      color: #9a7060;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <!-- ═══ PAGE 1 ═══ -->
+
+  <div class="label">Véronique Pagnon · Context Consulting</div>
+  <div class="divider-gold"></div>
+
+  <h1>Vous êtes à un carrefour, coincé(e) dans une situation complexe.<br/><em>Vous ne voyez pas comment vous en sortir.</em></h1>
+
+  <p class="intro">Une décision impossible à prendre, une situation qui tourne en rond, quelque chose qui vous échappe malgré tous vos efforts. Ce n'est pas un manque de courage. C'est un manque de lecture du contexte.</p>
+
+  <div class="situations">
+    <div class="situations-label">Cela peut ressembler à</div>
+    <ul>
+      <li>Une problématique d'argent qui revient, une négociation qui dérape</li>
+      <li>Une transition professionnelle ou de vie que vous n'arrivez pas à amorcer</li>
+      <li>Une relation qui coince : associé, partenaire, famille, équipe</li>
+      <li>Une décision stratégique sur laquelle vous tournez en rond depuis trop longtemps</li>
+      <li>Un positionnement flou qui vous empêche d'avancer avec confiance</li>
+    </ul>
+  </div>
+
+  <p class="promise">J'aide les personnes déterminées, coincées dans des situations complexes, à voir ce qui leur échappe vraiment, en lisant le contexte des situations qu'elles traversent, les dynamiques cachées, les systèmes d'influence en cours, pour qu'elles se positionnent avec justesse, cessent de subir et prennent des décisions sans les regretter.</p>
+
+  <div class="divider-light"></div>
+
+  <div class="offer-box">
+    <div class="offer-label">Session Clarté</div>
+    <div class="offer-price-center">200 €</div>
+    <div class="duration-main">90 min à 2h30 · En visio et en présentiel</div>
+    <ul class="details">
+      <li>Un espace entièrement dédié à l'analyse de votre situation</li>
+      <li>Analyse par les mots, les récits, les énergies, le corps</li>
+      <li>Méthode Context Consulting</li>
+      <li>Compte rendu et suivi écrit dans les 24h</li>
+    </ul>
+  </div>
+
+  <div class="programme-teaser">
+    <div class="prog-label">Programme d'accompagnement</div>
+    <p>4 sessions de 90 minutes + un entraînement personnalisé sur 4 semaines. Pour les personnes qui veulent aller plus loin, et dont la situation nécessite un suivi sur plusieurs semaines. Voir page 2 pour le détail.</p>
+  </div>
+
+  <div class="divider-light"></div>
+
+  <div class="links">
+    <p>🌐 veroniquepagnon.github.io/context-consulting</p>
+    <p>Réservation : calendly.com/veronique-pagnon/session-clarte</p>
+  </div>
+
+  <div class="footer">© Véronique Pagnon · Context Consulting · veronique.pagnon@gmail.com</div>
+
+  <!-- ═══ PAGE 2 ═══ -->
+  <hr class="page-break" />
+
+  <div class="label">Véronique Pagnon · Context Consulting</div>
+  <div class="divider-gold"></div>
+
+  <h2>Deux façons de travailler ensemble</h2>
+  <p class="subtitle">Selon l'urgence de votre situation et la profondeur du travail souhaité.</p>
+
+  <div class="compare-block dark">
+    <div class="compare-head">Session Clarté</div>
+    <div class="compare-price">200 €  ·  Une session de 90 min à 2h30</div>
+    <div class="compare-subtitle">Pour les personnes qui ont besoin d'y voir clair maintenant.</div>
+    <p class="compare-body">Vous arrivez avec une situation floue ou bloquée — une décision, une impasse, quelque chose que vous n'arrivez pas à déchiffrer.</p>
+    <p class="compare-body">Vous repartez avec une lecture précise de ce qui se passe vraiment : les dynamiques cachées, les systèmes d'influence, les leviers que vous n'aviez pas vus.</p>
+    <p class="compare-result">Résultat : la clarté pour décider, agir et vous positionner avec justesse.</p>
+    <p class="compare-note">Idéal pour : une décision urgente · une situation ponctuelle · un premier pas</p>
+  </div>
+
+  <div class="compare-block light">
+    <div class="compare-head">Programme d'accompagnement</div>
+    <div class="compare-price">4 sessions de 90 min + un entraînement personnalisé sur 4 semaines</div>
+    <div class="compare-subtitle">Pour les personnes qui veulent aller plus loin, et dont la situation nécessite un suivi sur plusieurs semaines.</div>
+    <p class="compare-body">Après la Session Clarté, certains clients veulent intégrer en profondeur ce qu'ils ont vu — pour que ça change non pas pour une décision, mais pour toutes les situations à venir.</p>
+    <p class="compare-body">Sur 4 semaines, nous travaillons ensemble sur :</p>
+    <ul class="compare-items">
+      <li>Votre façon de vous positionner dans les situations complexes</li>
+      <li>Les dynamiques relationnelles et les systèmes d'influence qui vous freinent</li>
+      <li>Votre stratégie face aux décisions difficiles</li>
+      <li>L'ancrage d'une attitude gagnante, durable</li>
+    </ul>
+    <p class="compare-result">Résultat : vous prenez vos décisions sans les regretter et vous adoptez une attitude gagnante pour faire face à toutes les situations à venir.</p>
+    <p class="compare-note">Si vous vous inscrivez dans les 48h suivant votre Session Clarté, les 200 € sont déduits — vous payez 497 € au lieu de 697 €.</p>
+  </div>
+
+  <div class="divider-light"></div>
+
+  <div class="links">
+    <p>🌐 veroniquepagnon.github.io/context-consulting</p>
+    <p>Réservation : calendly.com/veronique-pagnon/session-clarte</p>
+  </div>
+
+  <div class="footer">© Véronique Pagnon · Context Consulting · veronique.pagnon@gmail.com</div>
+
+</div>
+</body>
+</html>
