@@ -6,305 +6,50 @@
   <title>Clarity Session · Véronique Pagnon</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #faf8f5;
-      color: #2c2c2c;
-      line-height: 1.8;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 80px 24px;
-      background-color: #2a3830;
-      color: #f5f0e8;
-    }
-
-    .hero-label {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #a8c4a0;
-      margin-bottom: 32px;
-    }
-
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 52px);
-      font-weight: normal;
-      line-height: 1.3;
-      max-width: 600px;
-      margin-bottom: 28px;
-      text-align: center;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: #c8d9b8;
-    }
-
-    .hero-sub {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 17px;
-      color: #c5bfb3;
-      max-width: 520px;
-      line-height: 1.7;
-    }
-
-    .scroll-hint {
-      margin-top: 64px;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #6b8a6b;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 24px;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #8a9e88;
-      margin-bottom: 24px;
-    }
-
-    h2 {
-      font-size: clamp(22px, 3.5vw, 34px);
-      font-weight: normal;
-      line-height: 1.35;
-      margin-bottom: 28px;
-      color: #1e2820;
-    }
-
-    p {
-      font-size: 17px;
-      color: #3d3d3d;
-      margin-bottom: 20px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* RESONANCE SECTION */
-    .resonance {
-      background-color: #f0ebe2;
-    }
-
-    .resonance-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    .resonance-list {
-      list-style: none;
-      margin-top: 32px;
-    }
-
-    .resonance-list li {
-      font-size: 17px;
-      color: #3d3d3d;
-      padding: 14px 0;
-      border-bottom: 1px solid #d8d0c4;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .resonance-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: #8a9e88;
-    }
-
-    /* OFFER CARD */
-    .offer-section {
-      background-color: #2a3830;
-    }
-
-    .offer-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 80px 24px;
-      color: #f5f0e8;
-    }
-
-    .offer-inner .section-label {
-      color: #a8c4a0;
-    }
-
-    .offer-inner h2 {
-      color: #f5f0e8;
-      margin-bottom: 16px;
-    }
-
-    .offer-card {
-      background-color: #1e2820;
-      border-radius: 4px;
-      padding: 48px 40px;
-      margin-top: 48px;
-      text-align: center;
-    }
-
-    .offer-name {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #a8c4a0;
-      margin-bottom: 16px;
-    }
-
-    .offer-price {
-      font-size: 52px;
-      color: #f5f0e8;
-      margin-bottom: 8px;
-      line-height: 1;
-    }
-
-    .offer-price span {
-      font-size: 22px;
-      vertical-align: super;
-      font-size: 28px;
-    }
-
-    .offer-duration {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 14px;
-      color: #8aaa88;
-      margin-bottom: 36px;
-      letter-spacing: 1px;
-    }
-
-    .offer-details {
-      list-style: none;
-      margin-bottom: 40px;
-      text-align: left;
-    }
-
-    .offer-details li {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 15px;
-      color: #c5bfb3;
-      padding: 10px 0;
-      border-bottom: 1px solid #2e3e36;
-      padding-left: 24px;
-      position: relative;
-    }
-
-    .offer-details li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #a8c4a0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #a8c4a0;
-      color: #1e2820;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 18px 48px;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      width: 100%;
-    }
-
-    .cta-button:hover {
-      background-color: #c8d9b8;
-    }
-
-    .offer-note {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 13px;
-      color: #6b8a6b;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    /* ABOUT */
-    .about-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    /* INTAKE NOTE */
-    .intake {
-      background-color: #edf2eb;
-    }
-
-    .intake-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 56px 24px;
-    }
-
-    .intake-inner p {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 15px;
-      color: #4a5e48;
-      font-style: italic;
-    }
-
-    /* DIVIDER */
-    .divider {
-      width: 40px;
-      height: 1px;
-      background-color: #8a9e88;
-      margin: 0 auto 48px auto;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 40px 24px;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: #999;
-      background-color: #faf8f5;
-      border-top: 1px solid #e8e3db;
-    }
-
-    @media (max-width: 600px) {
-      .offer-card {
-        padding: 36px 24px;
-      }
-    }
+    body { font-family: 'Georgia', serif; background-color: #faf8f5; color: #2c2c2c; line-height: 1.8; }
+    a { color: inherit; text-decoration: none; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px 24px; background-color: #2a3830; color: #f5f0e8; }
+    .hero-label { font-family: 'Helvetica Neue', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #a8c4a0; margin-bottom: 32px; }
+    .hero h1 { font-size: clamp(28px, 5vw, 52px); font-weight: normal; line-height: 1.3; max-width: 600px; margin-bottom: 28px; text-align: center; }
+    .hero h1 em { font-style: italic; color: #c8d9b8; }
+    .hero-sub { font-family: 'Helvetica Neue', sans-serif; font-size: 17px; color: #c5bfb3; max-width: 520px; line-height: 1.7; }
+    .scroll-hint { margin-top: 64px; font-family: 'Helvetica Neue', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #6b8a6b; }
+    section { padding: 80px 24px; max-width: 680px; margin: 0 auto; }
+    .section-label { font-family: 'Helvetica Neue', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #8a9e88; margin-bottom: 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 34px); font-weight: normal; line-height: 1.35; margin-bottom: 28px; color: #1e2820; }
+    p { font-size: 17px; color: #3d3d3d; margin-bottom: 20px; }
+    p:last-child { margin-bottom: 0; }
+    .resonance { background-color: #f0ebe2; }
+    .resonance-inner { max-width: 680px; margin: 0 auto; padding: 80px 24px; }
+    .resonance-list { list-style: none; margin-top: 32px; }
+    .resonance-list li { font-size: 17px; color: #3d3d3d; padding: 14px 0; border-bottom: 1px solid #d8d0c4; padding-left: 20px; position: relative; }
+    .resonance-list li::before { content: '—'; position: absolute; left: 0; color: #8a9e88; }
+    .offer-section { background-color: #2a3830; }
+    .offer-inner { max-width: 680px; margin: 0 auto; padding: 80px 24px; color: #f5f0e8; }
+    .offer-inner .section-label { color: #a8c4a0; }
+    .offer-inner h2 { color: #f5f0e8; margin-bottom: 16px; }
+    .offer-card { background-color: #1e2820; border-radius: 4px; padding: 48px 40px; margin-top: 48px; text-align: center; }
+    .offer-name { font-family: 'Helvetica Neue', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #a8c4a0; margin-bottom: 16px; }
+    .offer-price { font-size: 52px; color: #f5f0e8; margin-bottom: 8px; line-height: 1; }
+    .offer-price span { font-size: 28px; vertical-align: super; }
+    .offer-duration { font-family: 'Helvetica Neue', sans-serif; font-size: 14px; color: #8aaa88; margin-bottom: 36px; letter-spacing: 1px; }
+    .offer-details { list-style: none; margin-bottom: 40px; text-align: left; }
+    .offer-details li { font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #c5bfb3; padding: 10px 0; border-bottom: 1px solid #2e3e36; padding-left: 24px; position: relative; }
+    .offer-details li::before { content: '✓'; position: absolute; left: 0; color: #a8c4a0; }
+    .cta-button { display: inline-block; background-color: #a8c4a0; color: #1e2820; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 18px 48px; border-radius: 2px; cursor: pointer; transition: background-color 0.2s; width: 100%; }
+    .cta-button:hover { background-color: #c8d9b8; }
+    .offer-note { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: #6b8a6b; margin-top: 20px; text-align: center; }
+    .about-inner { max-width: 680px; margin: 0 auto; padding: 80px 24px; }
+    .intake { background-color: #edf2eb; }
+    .intake-inner { max-width: 680px; margin: 0 auto; padding: 56px 24px; }
+    .intake-inner p { font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #4a5e48; font-style: italic; }
+    footer { text-align: center; padding: 40px 24px; font-family: 'Helvetica Neue', sans-serif; font-size: 12px; letter-spacing: 1px; color: #999; background-color: #faf8f5; border-top: 1px solid #e8e3db; }
+    @media (max-width: 600px) { .offer-card { padding: 36px 24px; } }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-label">Véronique Pagnon · Context Consulting</div>
     <h1>You're at a crossroads.<br/><em>It's time to see clearly.</em></h1>
@@ -312,7 +57,6 @@
     <div class="scroll-hint">↓ &nbsp; discover</div>
   </div>
 
-  <!-- RESONANCE -->
   <div class="resonance">
     <div class="resonance-inner">
       <div class="section-label">Does this resonate?</div>
@@ -326,7 +70,6 @@
     </div>
   </div>
 
-  <!-- WHAT WE DO -->
   <section>
     <div class="section-label">What we do together</div>
     <h2>A reading of what is really going on</h2>
@@ -334,10 +77,9 @@
     <p>What these situations share is structure: the rational arguments are exhausted, but something deeper is at stake. A decision unblocks when the missing context comes into view.</p>
     <p>During our session, we go to the heart of your situation. Through the words you choose, through what your body carries, through what circulates beneath your words. I read what is there and help you see it too.</p>
     <p>This is not therapy. It is a form of precise discernment that makes visible and workable what was still blurred. From there, it becomes easier to make a decision, take action, and gain perspective.</p>
-    <p>The session lasts between 90 minutes and 2h30, depending on the depth of your situation. There is nothing to prepare: just arrive with what you are living.</p>
+    <p>The session lasts between 1h30 and 2h, depending on the depth of your situation. There is nothing to prepare: just arrive with what you are living.</p>
   </section>
 
-  <!-- METHOD -->
   <div style="background-color: #f0ebe2;">
     <div style="max-width: 680px; margin: 0 auto; padding: 64px 24px;">
       <div class="section-label">The method</div>
@@ -353,28 +95,24 @@
           <p style="margin: 0; font-size: 16px;">Symbolic lines · Tarot · Akasha</p>
         </div>
       </div>
-      <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">These two levels of reading don't oppose each other. They complement. What analysis doesn't yet capture, the symbolic reveals. And the other way around.</p>
+      <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">What analysis doesn't yet capture, the symbolic reveals. And the other way around.</p>
     </div>
   </div>
 
-
-  <!-- OFFER -->
   <div class="offer-section">
     <div class="offer-inner">
       <div class="section-label">The offer</div>
       <h2>One session. One space. One clarity.</h2>
       <p style="color: #c5bfb3;">The Clarity Session is designed to go straight to the essential: no detours, no superfluity.</p>
-
       <div class="offer-card">
         <div class="offer-name">Clarity Session</div>
         <div class="offer-price"><span>€</span>200</div>
-        <div class="offer-duration">90 min to 2h30 · Online and in person</div>
+        <div class="offer-duration">1h30 to 2h · Online and in person</div>
         <ul class="offer-details">
           <li>A space dedicated entirely to your situation</li>
           <li>Context Consulting method</li>
           <li>Reading through words, energies, and the body</li>
-          <li>Session via video call from wherever you are</li>
-          <li>A written summary of key points within 24h</li>
+          <li>Identification of the concrete levers that were missing</li>
         </ul>
         <a href="https://calendly.com/veronique-pagnon/session-clarte" class="cta-button" target="_blank">Book my session</a>
         <p class="offer-note">You briefly describe your situation when booking.</p>
@@ -382,14 +120,12 @@
     </div>
   </div>
 
-  <!-- INTAKE NOTE -->
   <div class="intake">
     <div class="intake-inner">
       <p>"Before each session, I ask you to describe your situation in a few lines. Not to prepare myself, but so that you arrive already a little more settled, having put your first words on what you are living."</p>
     </div>
   </div>
 
-  <!-- ABOUT -->
   <div class="about-inner">
     <div class="section-label">Who I am</div>
     <h2>Véronique Pagnon</h2>
