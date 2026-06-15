@@ -61,7 +61,7 @@
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 17px;
       color: #c5bfb3;
-      max-width: 520px;
+      max-width: 560px;
       line-height: 1.7;
     }
 
@@ -179,7 +179,7 @@
     }
 
     .offer-price {
-      font-size: 52px;
+      font-size: 40px;
       color: #f5f0e8;
       margin-bottom: 8px;
       line-height: 1;
@@ -188,7 +188,6 @@
     .offer-price span {
       font-size: 22px;
       vertical-align: super;
-      font-size: 28px;
     }
 
     .offer-duration {
@@ -222,6 +221,40 @@
       color: #a8c4a0;
     }
 
+    /* BOOKING STEPS */
+    .booking-intro {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #a8c4a0;
+      margin-bottom: 24px;
+    }
+
+    .booking-steps {
+      text-align: left;
+    }
+
+    .booking-step {
+      margin-bottom: 8px;
+    }
+
+    .step-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #f5f0e8;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+      color: #8aaa88;
+      font-style: italic;
+      margin-bottom: 14px;
+    }
+
     .cta-button {
       display: inline-block;
       background-color: #a8c4a0;
@@ -236,10 +269,40 @@
       cursor: pointer;
       transition: background-color 0.2s;
       width: 100%;
+      text-align: center;
     }
 
     .cta-button:hover {
       background-color: #c8d9b8;
+    }
+
+    .cta-button-secondary {
+      display: inline-block;
+      background-color: transparent;
+      color: #a8c4a0;
+      border: 1px solid #3d5248;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 17px 48px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      width: 100%;
+      text-align: center;
+    }
+
+    .cta-button-secondary:hover {
+      border-color: #a8c4a0;
+      background-color: #2e3e36;
+    }
+
+    .booking-divider {
+      border: none;
+      border-top: 1px solid #2e3e36;
+      margin: 24px 0;
     }
 
     .offer-note {
@@ -308,7 +371,7 @@
   <div class="hero">
     <div class="hero-label">Véronique Pagnon · Context Consulting</div>
     <h1>Vous êtes à un carrefour.<br/><em>Il est temps d'y voir clair.</em></h1>
-    <p class="hero-sub">J'accompagne les personnes face à une décision difficile ou une situation qui n'avance plus, pour voir clairement ce qui est là et enfin pouvoir choisir et avancer.</p>
+    <p class="hero-sub">J'accompagne les personnes qui font face à des situations complexes à voir ce qui leur échappe vraiment, pour décider sans hésiter, avancer sans subir, et marquer votre différence.</p>
     <div class="scroll-hint">↓ &nbsp; découvrir</div>
   </div>
 
@@ -317,11 +380,14 @@
     <div class="resonance-inner">
       <div class="section-label">Vous reconnaissez-vous ?</div>
       <h2>Ce que vous vivez</h2>
+      <p style="font-style: italic; color: #7a6a5a; margin-bottom: 6px;">Vous ne voyez pas comment vous en sortir.</p>
+      <p style="font-style: italic; color: #7a6a5a; margin-bottom: 0;">Vous ne voyez pas comment marquer votre différence.</p>
       <ul class="resonance-list">
-        <li>Vous tournez en rond autour d'une décision depuis trop longtemps sans pouvoir avancer.</li>
-        <li>Vous sentez que quelque chose vous échappe dans une situation que vous croyez pourtant bien connaître.</li>
-        <li>Vous avez cherché des réponses à une problématique sans les trouver. Vous avez besoin de clarté, pas de conseils de plus.</li>
-        <li>Vous êtes à un moment charnière, professionnel ou relationnel, et vous voulez avancer depuis un endroit stable en vous.</li>
+        <li>Vous êtes concentré sur vos objectifs et vos projets. Vous n'arrivez plus à voir clair dans votre présent et votre contexte actuel.</li>
+        <li>Quelque chose vous échappe dans une situation que vous croyez pourtant bien connaître.</li>
+        <li>Vous avez cherché des réponses sans les trouver. Vous avez besoin de clarté.</li>
+        <li>Vous sentez que vous avez une carte à jouer — professionnellement, relationnellement — mais vous ne voyez pas comment marquer votre différence.</li>
+        <li>Vous êtes à un moment charnière et vous voulez avancer depuis un endroit stable en vous.</li>
       </ul>
     </div>
   </div>
@@ -330,11 +396,12 @@
   <section>
     <div class="section-label">Ce qu'on fait ensemble</div>
     <h2>Une lecture de ce qui se passe vraiment</h2>
-    <p>La décision n'est pas un problème de courage. C'est un problème de contexte.</p>
     <p>Ce que ces situations ont en commun, c'est une structure : les arguments rationnels sont épuisés, mais quelque chose de plus profond est en jeu. Une décision se débloque quand le contexte manquant apparaît.</p>
     <p>Pendant notre session, nous allons au fond de votre situation. Par les mots que vous choisissez, par ce que votre corps transmet, par ce qui circule à travers vos mots. Je lis ce qui est là et je vous aide à le voir aussi.</p>
     <p>Ce n'est pas de la thérapie. C'est une forme de discernement précis qui rend visible et analysable ce qui était encore flou. Il est alors plus facile de prendre une décision, de se mettre en action, et de prendre du recul.</p>
+    <p>La session travaille le présent : non pas ce qui a été, ni les objectifs à atteindre, mais ce qui se passe maintenant dans votre situation et votre contexte actuel.</p>
     <p>La session dure entre 1h30 et 2h, selon la profondeur de votre situation. Vous n'avez rien à préparer : juste arriver avec ce que vous vivez.</p>
+    <p style="font-style: italic; color: #5a5a5a; border-left: 2px solid #8a9e88; padding-left: 16px; margin-top: 28px;">Dans chaque Session Clarté, trois leviers s'activent : les angles morts qui bloquaient la lecture de votre situation, les forces en place qui n'étaient pas encore visibles, et la voie qui devient possible. Une nouvelle direction apparaît.</p>
   </section>
 
   <!-- METHODE -->
@@ -353,7 +420,7 @@
           <p style="margin: 0; font-size: 16px;">Lignes symboliques · Tarot · Akasha</p>
         </div>
       </div>
-      <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">Ce que l'analyse ne capte pas encore, le symbolique le révèle. Et inversement.</p>
+      <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">Ces deux niveaux de lecture ne s'opposent pas : ils se complètent. Ce que l'analyse ne capte pas encore, le symbolique le révèle. Et inversement.</p>
     </div>
   </div>
 
@@ -362,28 +429,36 @@
     <div class="offer-inner">
       <div class="section-label">L'offre</div>
       <h2>Une session. Un espace. Une clarté.</h2>
-      <p style="color: #c5bfb3;">La Session Clarté est conçue pour aller à l'essentiel : sans détour, sans superflu.</p>
+      <p style="color: #c5bfb3;">La Session Clarté est conçue pour aller à l'essentiel : sans détour, sans superflu. Vous repartez avec l'analyse de ce qui se joue.</p>
 
       <div class="offer-card">
         <div class="offer-name">Session Clarté</div>
         <div class="offer-price"><span>€</span>200</div>
-        <div class="offer-duration">1h30 à 2h · En visio et en présentiel</div>
+        <div class="offer-duration">2h30 au total · En visio et en présentiel</div>
         <ul class="offer-details">
           <li>Un espace dédié entièrement à votre situation</li>
           <li>Méthode Context Consulting</li>
           <li>Lecture par les mots, les énergies, le corps</li>
           <li>Identification des leviers concrets jusqu'ici manquants</li>
         </ul>
-        <a href="https://calendly.com/veronique-pagnon/session-clarte" class="cta-button" target="_blank">Réserver ma session</a>
-        <p class="offer-note">Vous décrivez brièvement votre situation lors de la réservation.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- INTAKE NOTE -->
-  <div class="intake">
-    <div class="intake-inner">
-      <p>"Avant chaque session, je vous demande de décrire votre situation en quelques lignes. Non pas pour me préparer, mais pour que vous arriviez déjà un peu plus posé, ayant mis vos premiers mots sur ce que vous vivez."</p>
+        <div class="booking-intro">La réservation se fait en deux temps</div>
+
+        <div class="booking-steps">
+          <div class="booking-step">
+            <div class="step-label">① Appel 30 min</div>
+            <div class="step-desc">Pour parler de votre situation et poser les jalons de la session.</div>
+            <a href="https://calendly.com/veronique-pagnon/session-clarte-context-consulting-clone" class="cta-button" target="_blank">Réserver l'appel</a>
+          </div>
+          <hr class="booking-divider">
+          <div class="booking-step">
+            <div class="step-label">② Session Clarté — 1h30 à 2h</div>
+            <div class="step-desc">Pour aller au fond de ce qui coince dans votre situation.</div>
+            <a href="https://calendly.com/veronique-pagnon/session-clarte" class="cta-button cta-button-secondary" target="_blank">Réserver la session</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
