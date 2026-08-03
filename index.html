@@ -17,6 +17,7 @@
 
     /* HERO — plein pied Majorque */
     .hero {
+      position: relative;
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -24,7 +25,27 @@
       background-color: #2a3830;
       color: #f5f0e8;
     }
+    .lang-switch {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid rgba(200, 217, 184, 0.4);
+      border-radius: 20px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #c8d9b8;
+      z-index: 10;
+    }
+    .lang-switch svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .lang-switch:hover { color: #f5f0e8; border-color: rgba(245, 240, 232, 0.6); }
     .hero-text {
+      position: relative;
       padding: 80px 48px 80px 64px;
       display: flex;
       flex-direction: column;
@@ -436,7 +457,9 @@
       }
       .hero-photo { height: 480px; }
       .hero-photo img { object-position: center 15%; }
-      .hero-text { padding: 40px 16px 40px 24px; }
+      .hero-text { padding: 64px 16px 40px 24px; }
+      .lang-switch { top: 16px; right: 16px; padding: 4px 9px; font-size: 10px; gap: 4px; }
+      .lang-switch svg { width: 11px; height: 11px; }
       .hero h1 { font-size: 20px; }
       .hero-sub { display: none; }
       .accroche-inner p { font-size: 18px; line-height: 1.55; }
@@ -452,6 +475,7 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-text">
+      <a href="index-en.html" class="lang-switch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg>EN</a>
       <div class="hero-label">Véronique Pagnon</div>
       <div class="hero-brand">Context Consulting</div>
       <h1>Vous êtes à un carrefour décisif, coincé(e) dans une situation complexe, ou tout simplement qui n'en peut plus de stagner.</h1>
@@ -594,7 +618,8 @@
   </div>
 
   <footer>
-    © Véronique Pagnon · Context Consulting &nbsp;·&nbsp; Photos : Isabelle Martin
+    © Véronique Pagnon · Context Consulting &nbsp;·&nbsp; Palma, Spain &nbsp;·&nbsp; <a href="mailto:contact@yourcontextconsulting.com">contact@yourcontextconsulting.com</a><br>
+    Photos : Isabelle Martin
   </footer>
 
 </body>
