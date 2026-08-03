@@ -179,6 +179,51 @@
       object-position: 62% center;
       display: block;
     }
+    .symbolic-photo-band {
+      background-color: #f0ebe2;
+      padding: 64px 24px;
+    }
+    .symbolic-photo {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .symbolic-triptych {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .symbolic-photo .photo-frame {
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      border-radius: 2px;
+      outline: 1px solid #8a9e88;
+      outline-offset: 6px;
+      box-shadow: 0 4px 24px rgba(42,56,48,0.13);
+    }
+    .symbolic-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .symbolic-photo img.bw { filter: grayscale(100%) contrast(1.05); }
+    .symbolic-photo img.gold { filter: sepia(85%) saturate(180%) hue-rotate(-10deg) brightness(0.95); }
+    .symbolic-photo .caption {
+      margin-top: 26px;
+      font-style: italic;
+      color: #5a5a5a;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 640px) {
+      .symbolic-triptych { grid-template-columns: 1fr; }
+      .symbolic-photo .photo-frame { height: 300px; }
+    }
     .method-card {
       background: #fff;
       border-radius: 4px;
@@ -267,8 +312,9 @@
     }
     .offer-tag {
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 20px;
     }
@@ -393,6 +439,7 @@
       .hero-text { padding: 40px 16px 40px 24px; }
       .hero h1 { font-size: 20px; }
       .hero-sub { display: none; }
+      .accroche-inner p { font-size: 18px; line-height: 1.55; }
       .offers-grid { grid-template-columns: 1fr; }
       .method-with-photo { grid-template-columns: 1fr; }
       .method-photo { order: -1; max-width: 280px; margin: 0 auto; }
@@ -407,8 +454,7 @@
     <div class="hero-text">
       <div class="hero-label">Véronique Pagnon</div>
       <div class="hero-brand">Context Consulting</div>
-      <h1>Vous êtes à un carrefour, coincé(e) dans une situation complexe.</h1>
-      <p class="hero-sub">La réponse est souvent là où vous ne pensiez pas chercher.</p>
+      <h1>Vous êtes à un carrefour décisif, coincé(e) dans une situation complexe, ou tout simplement qui n'en peut plus de stagner.</h1>
     </div>
     <div class="hero-photo">
       <img src="portrait-hero.jpg" alt="Véronique Pagnon" />
@@ -418,21 +464,20 @@
   <!-- ACCROCHE -->
   <div class="accroche">
     <div class="accroche-inner">
-      <p>Une décision bloquée, un projet qui piétine sans raison apparente, le sentiment que quelque chose vous échappe. La situation est trop floue, trop complexe pour avancer seul.</p>
+      <p>Il se pourrait bien que vous soyez au bon endroit, car la réponse est souvent là où on ne pense pas à regarder.</p>
     </div>
   </div>
 
   <!-- SITUATIONS -->
   <div class="situations">
     <div class="situations-inner">
-      <div class="situations-label">Cela peut ressembler à</div>
+      <div class="situations-label">Ce que vous vivez</div>
       <ul class="situations-list">
-        <li>Une transition professionnelle ou de vie que vous n'arrivez pas à amorcer</li>
-        <li>Une décision stratégique sur laquelle vous tournez en rond depuis trop longtemps</li>
-        <li>Un positionnement flou qui vous empêche d'avancer avec confiance</li>
+        <li>Vous traversez une transition de vie ou professionnelle et vous souhaitez lui donner un nouvel élan</li>
+        <li>Vous stagnez, vous tournez en rond depuis longtemps sans prendre la décision stratégique que vous espérez</li>
+        <li>Vous sentez que votre vision et votre ambition sont au repos depuis trop longtemps</li>
+        <li>Vous voulez marquer la prochaine décennie par vos créations et votre ambition, mais vous ne savez pas encore comment</li>
       </ul>
-      <p class="mon-travail">Vous êtes-vous déjà demandé si vous aviez vraiment regardé partout ?</p>
-      <p style="font-size: 17px; color: #3d3d3d; margin-top: 12px; font-style: italic;">Les éléments les plus actifs dans une situation se cachent souvent là où on ne pense pas à chercher.</p>
     </div>
   </div>
 
@@ -441,9 +486,67 @@
     <div style="max-width: 720px; margin: 0 auto;">
       <div class="section-label">Ce qu'on fait ensemble</div>
       <h2>Une lecture de ce qui se passe vraiment</h2>
-      <p>Ce que ces situations ont en commun c'est une structure : les arguments rationnels sont épuisés, mais quelque chose de plus profond est en jeu. Une décision se débloque quand le contexte manquant apparaît.</p>
       <p>Dans nos rencontres, nous allons au fond de votre situation. Par les mots que vous choisissez, par ce que votre corps transmet, par ce qui circule à travers vos mots. Je lis ce qui est là et je vous aide à le voir aussi.</p>
-      <p>Ce n'est pas de la thérapie. C'est une forme de discernement précis qui rend visible et analysable ce qui était encore flou. Il est alors plus facile de prendre une décision, de se mettre en action, et de prendre du recul.</p>
+      <p>Nous allons dans les coulisses de ce qui se joue pour vous, et nous pouvons scanner les influences majeures, celles qui vous freinent et celles qui peuvent vous propulser.</p>
+      <p>Ce n'est pas de la thérapie. C'est une forme de discernement et d'entraînement pour que vos habitudes et vos ambitions trouvent les voies porteuses pour vos projets et votre vision.</p>
+      <blockquote style="margin-top: 28px; padding: 18px 22px; border-left: 3px solid #8a9e88; background: #edf2eb; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #3d3d3d; line-height: 1.75;">Context Consulting scanne le terrain. Rend visible ce qui ne l'est pas encore : les angles morts, les leviers et les atouts disponibles et prêts à être renforcés, pour vous positionner avec justesse et prendre des décisions sans les regretter ni culpabiliser.</blockquote>
+    </div>
+  </div>
+
+  <!-- PHOTO SYMBOLIQUE -->
+  <div class="symbolic-photo-band">
+    <div class="symbolic-photo">
+      <div class="symbolic-triptych">
+        <div class="photo-frame">
+          <img class="bw" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, noir et blanc" />
+        </div>
+        <div class="photo-frame">
+          <img src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, couleur d'origine" />
+        </div>
+        <div class="photo-frame">
+          <img class="gold" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, tons dorés" />
+        </div>
+      </div>
+      <p class="caption">Nénuphars, jardin de Giverny, 2019 — photographie personnelle (originale, au centre).<br>Sans le contexte et sans la lecture du détail, difficile de savoir ce que l'on regarde vraiment. C'est exactement ce que nous faisons avec votre situation : contacter les détails tout en ayant la connaissance du contexte général tout en variant les filtres de perception.</p>
+    </div>
+  </div>
+
+  <!-- OFFRES -->
+  <div class="offers-section">
+    <div class="offers-inner">
+      <div class="offers-label" style="text-align: center; font-size: 22px;">Deux façons d'agir</div>
+      <div class="offers-grid">
+
+        <div class="offer-card offer-card-clarity">
+          <div class="offer-tag offer-tag-clarity">Session Clarté</div>
+          <div class="offer-name">1 séance pour révéler les angles morts d'une situation bloquée, et activer les leviers pour avancer</div>
+          <p class="offer-body">Pour une décision bloquée, une situation complexe à déchiffrer. Vous repartez avec l'analyse de ce qui se joue, lue dans le concret et le symbolique, et la possibilité de trier sans hésiter, décider sans culpabiliser.</p>
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #a8c4a0; font-size: 15px; margin-bottom: 24px; line-height: 1.6;">Dans chaque Session Clarté, trois leviers s'activent. Une nouvelle voie devient possible.</p>
+          <ul class="offer-list">
+            <li>Un espace entièrement dédié à l'analyse de votre situation</li>
+            <li>Méthode Context Consulting</li>
+            <li>Identification des angles morts dans votre situation</li>
+            <li>Identification des leviers concrets jusqu'ici manquants</li>
+            <li>En visio ou en présentiel</li>
+          </ul>
+          <a href="session-clarte.html" class="offer-btn offer-btn-clarity">Réserver →</a>
+        </div>
+
+        <div class="offer-card offer-card-boost">
+          <div class="offer-tag offer-tag-boost">Programme Boost</div>
+          <div class="offer-name">3 mois pour réveiller une ambition et booster son impact et sa visibilité</div>
+          <p class="offer-body">Vous sentez le changement, vos angles morts sont révélés, vos atouts se renforcent. Vous reprenez la main. Le programme donne un cadre, une impulsion.</p>
+          <ul class="offer-list offer-list-boost">
+            <li>Semaine d'ouverture : élaboration de votre Carte du Contexte Actuel et de Réalité actuelle. Identification de vos angles morts, de vos leviers et de vos meilleurs atouts</li>
+            <li>Identification de vos angles morts, au fil du programme</li>
+            <li>Élaboration et suivi, tout au long du programme, de votre Carte du Contexte Actuel, de votre Carte de Réalité et de la stratégie qui booste votre ambition et votre créativité</li>
+            <li>Mises en pratique entre les séances</li>
+            <li>En visio ou en présentiel</li>
+          </ul>
+          <a href="mailto:veronique.pagnon@gmail.com?subject=Programme%20Boost%20%E2%80%94%20demande%20d%27informations&body=Bonjour%20V%C3%A9ronique%2C%20je%20souhaiterais%20en%20savoir%20plus%20sur%20le%20Programme%20Boost." class="offer-btn offer-btn-boost">Me contacter →</a>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -464,8 +567,6 @@
             <p>Lecture par les mots, les récits, le corps · Lignes symboliques · Tarot · Akasha</p>
           </div>
         </div>
-        <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">Ces deux niveaux de lecture ne s'opposent pas : ils se complètent.</p>
-        <blockquote style="margin-top: 28px; padding: 18px 22px; border-left: 3px solid #8a9e88; background: #edf2eb; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #3d3d3d; line-height: 1.75;">Context Consulting scanne le terrain. Rend visible ce qui ne l'est pas encore : les angles morts, les leviers et les atouts disponibles et prêts à être renforcés, pour vous positionner avec justesse et prendre des décisions sans les regretter ni culpabiliser.</blockquote>
       </div>
       <div class="method-photo">
         <div class="photo-frame">
@@ -475,54 +576,6 @@
     </div>
   </div>
 
-  <!-- BANDEAU CITATION -->
-  <div class="quote-band">
-    <div class="quote-band-inner">
-      <p class="quote-band-question">Quand les transitions rencontrent leur moment décisif.</p>
-    </div>
-  </div>
-
-  <!-- OFFRES -->
-  <div class="offers-section">
-    <div class="offers-inner">
-      <div class="offers-label" style="text-align: center; font-size: 22px;">Deux façons d'agir</div>
-      <h2 class="offers-title">Selon votre situation et la profondeur du travail souhaité</h2>
-      <div class="offers-grid">
-
-        <div class="offer-card offer-card-clarity">
-          <div class="offer-tag offer-tag-clarity">Session Clarté</div>
-          <div class="offer-name">Une séance pour révéler les angles morts d'une situation bloquée, et ouvrir les leviers pour avancer</div>
-          <p class="offer-body">Pour une décision bloquée, une situation complexe à déchiffrer. Vous repartez avec l'analyse de ce qui se joue, lue dans le concret et le symbolique, et la possibilité de trier sans hésiter, décider sans culpabiliser.</p>
-          <p style="font-family: 'Georgia', serif; font-style: italic; color: #a8c4a0; font-size: 15px; margin-bottom: 24px; line-height: 1.6;">Dans chaque Session Clarté, trois leviers s'activent. Une nouvelle voie devient possible.</p>
-          <ul class="offer-list">
-            <li>Un espace entièrement dédié à l'analyse de votre situation</li>
-            <li>Méthode Context Consulting</li>
-            <li>Identification des angles morts dans votre situation</li>
-            <li>Identification des leviers concrets jusqu'ici manquants</li>
-            <li>En visio ou en présentiel</li>
-          </ul>
-          <a href="session-clarte.html" class="offer-btn offer-btn-clarity">Réserver →</a>
-        </div>
-
-        <div class="offer-card offer-card-boost">
-          <div class="offer-tag offer-tag-boost">Programme Boost · Lancement juillet 2026</div>
-          <div class="offer-name">3 mois pour transformer une situation bloquée en stratégie qui tient</div>
-          <p class="offer-body">Ce qui change en trois à quatre mois, ce n'est pas nécessairement la situation externe, c'est la manière d'opérer à l'intérieur de cette situation. Vous sentez le changement. Vos angles morts se révèlent, vos atouts se renforcent, lus dans le concret et le symbolique. On reprend la main. Le programme donne un cadre, vous donnez le contenu : les leviers travaillés sont entièrement les vôtres.</p>
-          <ul class="offer-list offer-list-boost">
-            <li>Semaine d'ouverture : 2 rendez-vous pour l'élaboration de votre Carte du Contexte Actuel</li>
-            <li>Identification de vos angles morts, au fil du programme</li>
-            <li>3 Séances cardinales</li>
-            <li>Suivi Context Coaching</li>
-            <li>Élaboration et suivi, tout au long du programme, de votre Carte du Contexte Actuel et de votre Carte de Réalité</li>
-            <li>Mises en pratique entre les séances</li>
-            <li>En visio ou en présentiel</li>
-          </ul>
-          <a href="mailto:veronique.pagnon@gmail.com?subject=Programme%20Boost%20%E2%80%94%20demande%20d%27informations&body=Bonjour%20V%C3%A9ronique%2C%20je%20souhaiterais%20en%20savoir%20plus%20sur%20le%20Programme%20Boost." class="offer-btn offer-btn-boost">Me contacter →</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- ABOUT -->
   <div class="about-split">

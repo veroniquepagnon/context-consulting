@@ -179,6 +179,51 @@
       object-position: 62% center;
       display: block;
     }
+    .symbolic-photo-band {
+      background-color: #f0ebe2;
+      padding: 64px 24px;
+    }
+    .symbolic-photo {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .symbolic-triptych {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .symbolic-photo .photo-frame {
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      border-radius: 2px;
+      outline: 1px solid #8a9e88;
+      outline-offset: 6px;
+      box-shadow: 0 4px 24px rgba(42,56,48,0.13);
+    }
+    .symbolic-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .symbolic-photo img.bw { filter: grayscale(100%) contrast(1.05); }
+    .symbolic-photo img.gold { filter: sepia(85%) saturate(180%) hue-rotate(-10deg) brightness(0.95); }
+    .symbolic-photo .caption {
+      margin-top: 26px;
+      font-style: italic;
+      color: #5a5a5a;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 640px) {
+      .symbolic-triptych { grid-template-columns: 1fr; }
+      .symbolic-photo .photo-frame { height: 300px; }
+    }
     .method-card {
       background: #fff;
       border-radius: 4px;
@@ -267,8 +312,9 @@
     }
     .offer-tag {
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: 10px;
-      letter-spacing: 2.5px;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 20px;
     }
@@ -384,6 +430,7 @@
       .hero-text { padding: 40px 16px 40px 24px; }
       .hero h1 { font-size: 20px; }
       .hero-sub { display: none; }
+      .accroche-inner p { font-size: 18px; line-height: 1.55; }
       .offers-grid { grid-template-columns: 1fr; }
       .method-with-photo { grid-template-columns: 1fr; }
       .method-photo { order: -1; max-width: 280px; margin: 0 auto; }
@@ -398,8 +445,7 @@
     <div class="hero-text">
       <div class="hero-label">Véronique Pagnon</div>
       <div class="hero-brand">Context Consulting</div>
-      <h1>You are at a crossroads, stuck in a complex situation.</h1>
-      <p class="hero-sub">The answer is often where you did not think to look.</p>
+      <h1>You are at a decisive crossroads, stuck in a complex situation, or simply unable to stand still any longer.</h1>
     </div>
     <div class="hero-photo">
       <img src="portrait-hero.jpg" alt="Véronique Pagnon" />
@@ -409,20 +455,20 @@
   <!-- ACCROCHE -->
   <div class="accroche">
     <div class="accroche-inner">
-      <p>A blocked decision, a project stalling for no apparent reason, the feeling that something is escaping you. The situation is too unclear, too complex to move forward alone.</p>
+      <p>It could well be that you are in the right place, because the answer is often where we don't think to look.</p>
     </div>
   </div>
 
   <!-- SITUATIONS -->
   <div class="situations">
     <div class="situations-inner">
-      <div class="situations-label">This can look like</div>
+      <div class="situations-label">What you are experiencing</div>
       <ul class="situations-list">
-        <li>A professional or life transition you cannot seem to get started</li>
-        <li>A strategic decision you have been going around in circles on for too long</li>
-        <li>A blurry positioning that stops you from moving forward with confidence</li>
+        <li>You are going through a life or professional transition and you want to give it new momentum</li>
+        <li>You are stuck, going around in circles for a long time without making the strategic decision you are hoping for</li>
+        <li>You feel that your vision and your ambition have been resting for too long</li>
+        <li>You want to mark the next decade with your creations and your ambition, but you don't yet know how</li>
       </ul>
-      <p class="mon-travail">Have you ever wondered whether you had truly looked everywhere?</p>
       <p style="font-size: 17px; color: #3d3d3d; margin-top: 12px; font-style: italic;">The most active elements in a situation often hide where you would not think to look.</p>
     </div>
   </div>
@@ -432,9 +478,67 @@
     <div style="max-width: 720px; margin: 0 auto;">
       <div class="section-label">What we do together</div>
       <h2>A reading of what is really going on</h2>
-      <p>What these situations have in common is a structure: rational arguments are exhausted, yet something deeper is at play. A decision unlocks when the missing context appears.</p>
       <p>In our sessions, we go to the heart of your situation. Through the words you choose, what your body conveys, what circulates through your words. I read what is there and help you see it too.</p>
-      <p>This is not therapy. It is a form of precise discernment that makes visible and analysable what was still unclear. From there, it becomes easier to decide, to act, and to step back.</p>
+      <p>We go behind the scenes of what is really at play for you, and we can scan the major influences, those that hold you back and those that can propel you forward.</p>
+      <p>This is not therapy. It is a form of discernment and training so that your habits and your ambitions find the paths that carry your projects and your vision forward.</p>
+      <blockquote style="margin-top: 28px; padding: 18px 22px; border-left: 3px solid #8a9e88; background: #edf2eb; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #3d3d3d; line-height: 1.75;">Context Consulting scans the terrain. Makes visible what is not yet: the blind spots, the levers and the assets available and ready to be strengthened, so you can position yourself with precision and make decisions without regretting them or second-guessing yourself.</blockquote>
+    </div>
+  </div>
+
+  <!-- SYMBOLIC PHOTO -->
+  <div class="symbolic-photo-band">
+    <div class="symbolic-photo">
+      <div class="symbolic-triptych">
+        <div class="photo-frame">
+          <img class="bw" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, black and white" />
+        </div>
+        <div class="photo-frame">
+          <img src="nenuphars.jpg" alt="Water lilies, Giverny gardens, original colour" />
+        </div>
+        <div class="photo-frame">
+          <img class="gold" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, gold tones" />
+        </div>
+      </div>
+      <p class="caption">Water lilies, Giverny gardens, 2019 — personal photograph (original, centre image).<br>Without context, and without a reading of the detail, it is hard to know what you are really looking at. That is exactly what we do with your situation: engage with the details while holding an awareness of the broader context while varying the filters of perception.</p>
+    </div>
+  </div>
+
+  <!-- OFFERS -->
+  <div class="offers-section">
+    <div class="offers-inner">
+      <div class="offers-label" style="text-align: center; font-size: 22px;">Two ways to act</div>
+      <div class="offers-grid">
+
+        <div class="offer-card offer-card-clarity">
+          <div class="offer-tag offer-tag-clarity">Clarity Session</div>
+          <div class="offer-name">1 session to reveal the blind spots in a stuck situation, and activate the levers to move forward</div>
+          <p class="offer-body">For a blocked decision, a complex situation to decipher. You leave with an analysis of what is at play, read through both the concrete and the symbolic, and the ability to sort without hesitating, decide without second-guessing.</p>
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #a8c4a0; font-size: 15px; margin-bottom: 24px; line-height: 1.6;">In every Clarity Session, three levers activate. A new path becomes possible.</p>
+          <ul class="offer-list">
+            <li>A space entirely dedicated to analysing your situation</li>
+            <li>Context Consulting method</li>
+            <li>Identification of blind spots in your situation</li>
+            <li>Identification of concrete levers that were missing until now</li>
+            <li>Online or in person</li>
+          </ul>
+          <a href="session-clarity.html" class="offer-btn offer-btn-clarity">Book →</a>
+        </div>
+
+        <div class="offer-card offer-card-boost">
+          <div class="offer-tag offer-tag-boost">Boost Programme</div>
+          <div class="offer-name">3 months to awaken an ambition and boost your impact and visibility</div>
+          <p class="offer-body">You feel the shift, your blind spots are revealed, your assets strengthen. You take back the lead. The programme provides a framework, an impetus.</p>
+          <ul class="offer-list offer-list-boost">
+            <li>Opening week: building your Current Context Map and Current Reality Map. Identifying your blind spots, your levers and your greatest strengths</li>
+            <li>Identification of your blind spots, throughout the programme</li>
+            <li>Ongoing development, throughout the programme, of your Current Context Map, your Reality Map and the strategy that boosts your ambition and creativity</li>
+            <li>Practice between sessions</li>
+            <li>Online or in person</li>
+          </ul>
+          <a href="mailto:veronique.pagnon@gmail.com?subject=Boost%20Programme%20%E2%80%94%20information%20request&body=Hello%20V%C3%A9ronique%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Boost%20Programme." class="offer-btn offer-btn-boost">Contact me →</a>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -455,8 +559,6 @@
             <p>Reading through words, narratives, the body · Symbolic lines · Tarot · Akasha</p>
           </div>
         </div>
-        <p style="margin-top: 24px; font-style: italic; color: #5a5a5a;">These two levels of reading do not oppose each other: they complement each other.</p>
-        <blockquote style="margin-top: 28px; padding: 18px 22px; border-left: 3px solid #8a9e88; background: #edf2eb; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; color: #3d3d3d; line-height: 1.75;">Context Consulting scans the terrain. Makes visible what is not yet: the blind spots, the levers and the assets available and ready to be strengthened, so you can position yourself with precision and make decisions without regretting them or second-guessing yourself.</blockquote>
       </div>
       <div class="method-photo">
         <div class="photo-frame">
@@ -466,54 +568,6 @@
     </div>
   </div>
 
-  <!-- QUOTE BAND -->
-  <div class="quote-band">
-    <div class="quote-band-inner">
-      <p class="quote-band-question">When transitions meet their decisive moment.</p>
-    </div>
-  </div>
-
-  <!-- OFFERS -->
-  <div class="offers-section">
-    <div class="offers-inner">
-      <div class="offers-label" style="text-align: center; font-size: 22px;">Two ways to act</div>
-      <h2 class="offers-title">Depending on your situation and the depth of work you need</h2>
-      <div class="offers-grid">
-
-        <div class="offer-card offer-card-clarity">
-          <div class="offer-tag offer-tag-clarity">Clarity Session</div>
-          <div class="offer-name">A session to reveal the blind spots in a stuck situation, and open up the levers to move forward</div>
-          <p class="offer-body">For a blocked decision, a complex situation to decipher. You leave with an analysis of what is at play, read through both the concrete and the symbolic, and the ability to sort without hesitating, decide without second-guessing.</p>
-          <p style="font-family: 'Georgia', serif; font-style: italic; color: #a8c4a0; font-size: 15px; margin-bottom: 24px; line-height: 1.6;">In every Clarity Session, three levers activate. A new path becomes possible.</p>
-          <ul class="offer-list">
-            <li>A space entirely dedicated to analysing your situation</li>
-            <li>Context Consulting method</li>
-            <li>Identification of blind spots in your situation</li>
-            <li>Identification of concrete levers that were missing until now</li>
-            <li>Online or in person</li>
-          </ul>
-          <a href="session-clarity.html" class="offer-btn offer-btn-clarity">Book →</a>
-        </div>
-
-        <div class="offer-card offer-card-boost">
-          <div class="offer-tag offer-tag-boost">Boost Programme · Launching July 2026</div>
-          <div class="offer-name">3 months to turn a stuck situation into a strategy that holds</div>
-          <p class="offer-body">What changes over three to four months is not necessarily the external situation, it is the way of operating within that situation. You feel the shift. Your blind spots come to light, your assets strengthen, read through both the concrete and the symbolic. You take back the lead. The programme provides the frame, you provide the content: the levers we work on are entirely your own.</p>
-          <ul class="offer-list offer-list-boost">
-            <li>Opening week: 2 sessions to build your Current Context Map</li>
-            <li>Identification of your blind spots, throughout the programme</li>
-            <li>3 Cardinal Sessions</li>
-            <li>Ongoing Context Coaching</li>
-            <li>Ongoing development, throughout the programme, of your Current Context Map and your Reality Map</li>
-            <li>Practice between sessions</li>
-            <li>Online or in person</li>
-          </ul>
-          <a href="mailto:veronique.pagnon@gmail.com?subject=Boost%20Programme%20%E2%80%94%20information%20request&body=Hello%20V%C3%A9ronique%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Boost%20Programme." class="offer-btn offer-btn-boost">Contact me →</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- ABOUT -->
   <div class="about-split">
