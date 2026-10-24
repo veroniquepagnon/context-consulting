@@ -481,6 +481,28 @@
       .about-split { grid-template-columns: 1fr; }
     }
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap">
+  <style>
+    /* Touche lumineuse des offres (échos de la page Scan Boost), 24/10/2026 */
+    .offers-section { background: linear-gradient(160deg, #141c18 0%, #1a2420 50%, #24352c 100%); }
+    .offers-label { font-family: 'Jost', 'Helvetica Neue', sans-serif !important; font-weight: 400; letter-spacing: 0.32em !important; color: #d2c98a !important; }
+    .offer-card { border-radius: 0; gap: 0; }
+    .offer-card-clarity { background: linear-gradient(170deg, #2a3830 0%, #22302a 100%); border: 0; border-top: 2px solid #d2c98a; }
+    .offer-card-boost { background: linear-gradient(170deg, #141a25 0%, #24466b 100%); border: 0; border-top: 2px solid #ea8790; }
+    .offer-tag { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.26em; align-self: flex-start; border: 1px solid currentColor; border-radius: 999px; padding: 7px 16px; }
+    .offer-tag-clarity { color: #d2c98a; }
+    .offer-tag-boost { color: #ea8790; }
+    .offer-name { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 200; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; letter-spacing: -0.01em; }
+    .offer-body, .offer-list li { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; }
+    .offer-list li { padding-left: 30px; }
+    .offer-list li::before { top: 9px; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; background: #d2c98a; color: #1a2420; }
+    .offer-list-boost li::before { background: #ea8790; color: #141a25; }
+    .offer-btn { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 500; letter-spacing: 0.2em; border-radius: 999px; padding: 16px 30px; }
+    .offer-btn-clarity { background-color: #d2c98a; color: #1a2420; }
+    .offer-btn-boost { background-color: #8c1c2e; color: #ffffff; }
+    .offers-punch { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 200; font-size: clamp(26px, 4vw, 40px); line-height: 1.2; text-align: center; color: #f5f0e8; margin: 0 auto 48px; max-width: 760px; text-wrap: balance; }
+    .offers-punch span { color: #d2c98a; }
+  </style>
 </head>
 <body>
 
@@ -551,22 +573,22 @@
   <!-- OFFRES -->
   <div class="offers-section" id="offers">
     <div class="offers-inner">
+      <p class="offers-punch">Être bloqué n'empêche pas d'avancer.<br><span>La prochaine décennie se prépare maintenant.</span></p>
       <div class="offers-label" style="text-align: center; font-size: 22px;">Deux façons d'agir</div>
       <div class="offers-grid">
 
         <div class="offer-card offer-card-clarity">
-          <div class="offer-tag offer-tag-clarity">Diagnostic Clarté</div>
-          <div class="offer-name">1 rencontre pour révéler les angles morts d'une situation bloquée</div>
-          <p class="offer-body">Un diagnostic des angles morts actuels, des influences qui vous freinent, de celles qui vous portent, des voies envisageables. Vous repartez avec de la clarté sur ce qui se joue, et la possibilité de décider sans hésiter et sans regret.</p>
-          <p style="font-family: 'Georgia', serif; font-style: italic; color: #a8c4a0; font-size: 15px; margin-bottom: 24px; line-height: 1.6;">Dans chaque Diagnostic Clarté, trois leviers s'activent. Une nouvelle voie devient possible.</p>
+          <div class="offer-tag offer-tag-clarity">Context Reading</div>
+          <div class="offer-name">1 heure pour éclairer un moment décisif</div>
+          <p class="offer-body">Une décision à prendre maintenant, ou besoin de comprendre ce qui se joue autour de vous ? Je lis votre contexte : les enjeux du moment, les angles morts, ce qui vous porte et ce qui vous freine.</p>
           <ul class="offer-list">
-            <li>Un regard neuf sur votre situation</li>
-            <li>Méthode Context Consulting</li>
-            <li>Identification des angles morts dans votre situation</li>
-            <li>Identification des leviers concrets</li>
-            <li>En visio ou en présentiel</li>
+            <li>Une décision à éclairer maintenant</li>
+            <li>Vos enjeux actuels et vos angles morts</li>
+            <li>Une lecture du tangible et de l'intangible</li>
+            <li>1 heure, en visio ou en présentiel</li>
+            <li>90 €</li>
           </ul>
-          <a href="session-clarte.html" class="offer-btn offer-btn-clarity">Demander votre diagnostic →</a>
+          <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Réserver une Context Reading →</a>
         </div>
 
         <div class="offer-card offer-card-boost">
@@ -581,7 +603,7 @@
             <li>En bonus : un parcours vidéo, et votre profil décisionnel analysé</li>
             <li>En visio ou en présentiel</li>
           </ul>
-          <a href="mailto:contact@yourcontextconsulting.com?subject=Scan%20Boost%20%E2%80%94%20demande%20d%27informations&body=Bonjour%20V%C3%A9ronique%2C%20je%20souhaiterais%20en%20savoir%20plus%20sur%20Scan%20Boost." class="offer-btn offer-btn-boost">Me contacter →</a>
+          <a href="scan-boost.html" class="offer-btn offer-btn-boost">Découvrir Scan Boost →</a>
         </div>
 
       </div>
