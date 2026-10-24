@@ -493,6 +493,17 @@
     .offer-btn-boost { background-color: #8c1c2e; color: #ffffff; }
     .offers-punch { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 200; font-size: clamp(26px, 4vw, 40px); line-height: 1.2; text-align: center; color: #f5f0e8; margin: 0 auto 48px; max-width: 760px; text-wrap: balance; }
     .offers-punch span { color: #d2c98a; }
+    .offers-grid { align-items: stretch; }
+    .offer-card .offer-btn { margin-top: auto; }
+    .offer-card-clarity .offer-tagline { margin-top: auto; margin-bottom: 18px !important; }
+    .offer-card-clarity .offer-btn { margin-top: 0; }
+    .offer-name { margin-bottom: 26px !important; min-height: 3.6em; }
+    .offer-body { min-height: 12em; }
+    @media (max-width: 700px) { .offer-name, .offer-body { min-height: 0; } }
+    .offer-body { margin-bottom: 24px !important; }
+    .offer-tagline { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.5; color: #d2c98a; border-left: 2px solid #d2c98a; padding-left: 14px; margin: 0 0 28px; }
+    .offer-body { flex-grow: 0 !important; }
+    .offer-list { margin-bottom: 26px !important; }
   </style>
 </head>
 <body>
@@ -544,24 +555,6 @@
     </div>
   </div>
 
-  <!-- SYMBOLIC PHOTO -->
-  <div class="symbolic-photo-band">
-    <div class="symbolic-photo">
-      <div class="symbolic-triptych">
-        <div class="photo-frame">
-          <img class="bw" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, black and white" />
-        </div>
-        <div class="photo-frame">
-          <img src="nenuphars.jpg" alt="Water lilies, Giverny gardens, original colour" />
-        </div>
-        <div class="photo-frame">
-          <img class="gold" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, gold tones" />
-        </div>
-      </div>
-      <p class="caption">Water lilies, Giverny gardens, 2019 — personal photograph (original, centre image).<br>Without context, and without a reading of the detail, it is hard to know what you are really looking at.<br>That is exactly what we do with your situation: engage with the details while holding an awareness of the broader context, and varying the filters of perception.</p>
-    </div>
-  </div>
-
   <!-- OFFERS -->
   <div class="offers-section" id="offers">
     <div class="offers-inner">
@@ -578,15 +571,15 @@
             <li>Your current stakes and blind spots</li>
             <li>A reading of the tangible and the intangible</li>
             <li>1 hour, online or in person</li>
-            <li>€90</li>
           </ul>
-          <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Book a Context Reading →</a>
+          <p class="offer-tagline">One session, one clear light. You leave with a clear direction and a first decision within reach.</p>
+          <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Book a Context Reading · €90 VAT incl. →</a>
         </div>
 
         <div class="offer-card offer-card-boost">
           <div class="offer-tag offer-tag-boost">Scan Boost</div>
           <div class="offer-name">100 days: a detonator, then progressive training</div>
-          <p class="offer-body">You’re launching a project, changing course, or facing a real turning point. And you’re at a standstill. In 100 days, we defuse what’s blocking you, clear your path, and you commit to it, without doubt or regret.</p>
+          <p class="offer-body">A project, a change of course, a real turning point. You want to make a difference now and avoid going round in circles or scattering your energy for another two years, five years, or even ten years. In 100 days, you decode your context, sort out what carries you, and make your first decisions, with no regrets.</p>
           <ul class="offer-list offer-list-boost">
             <li>Scan, days 1 to 10: a laser diagnosis of your situation</li>
             <li>Boost, days 11 to 100: you settle into your solution, you train to decide and make deliberate choices</li>
@@ -630,6 +623,24 @@
   </div>
 
 
+  <!-- SYMBOLIC PHOTO -->
+  <div class="symbolic-photo-band">
+    <div class="symbolic-photo">
+      <div class="symbolic-triptych">
+        <div class="photo-frame">
+          <img class="bw" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, black and white" />
+        </div>
+        <div class="photo-frame">
+          <img src="nenuphars.jpg" alt="Water lilies, Giverny gardens, original colour" />
+        </div>
+        <div class="photo-frame">
+          <img class="gold" src="nenuphars.jpg" alt="Water lilies, Giverny gardens, gold tones" />
+        </div>
+      </div>
+      <p class="caption">Water lilies, Giverny gardens, 2019 — personal photograph (original, centre image).<br>Without context, and without a reading of the detail, it is hard to know what you are really looking at.<br>That is exactly what we do with your situation: engage with the details while holding an awareness of the broader context, and varying the filters of perception.</p>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <div class="about-split">
     <div class="about-photo">
@@ -648,7 +659,7 @@
 
   <footer>
     © Véronique Pagnon · Context Consulting &nbsp;·&nbsp; Palma, Spain &nbsp;·&nbsp; <a href="mailto:contact@yourcontextconsulting.com">contact@yourcontextconsulting.com</a><br>
-    Photos: Isabelle Martin
+    Photos: Isabelle Martin &nbsp;·&nbsp; <a href="legal-notice.html">Legal notice</a>
   </footer>
 
 </body>

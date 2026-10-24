@@ -502,6 +502,17 @@
     .offer-btn-boost { background-color: #8c1c2e; color: #ffffff; }
     .offers-punch { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 200; font-size: clamp(26px, 4vw, 40px); line-height: 1.2; text-align: center; color: #f5f0e8; margin: 0 auto 48px; max-width: 760px; text-wrap: balance; }
     .offers-punch span { color: #d2c98a; }
+    .offers-grid { align-items: stretch; }
+    .offer-card .offer-btn { margin-top: auto; }
+    .offer-card-clarity .offer-tagline { margin-top: auto; margin-bottom: 18px !important; }
+    .offer-card-clarity .offer-btn { margin-top: 0; }
+    .offer-name { margin-bottom: 26px !important; min-height: 3.6em; }
+    .offer-body { min-height: 12em; }
+    @media (max-width: 700px) { .offer-name, .offer-body { min-height: 0; } }
+    .offer-body { margin-bottom: 24px !important; }
+    .offer-tagline { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.5; color: #d2c98a; border-left: 2px solid #d2c98a; padding-left: 14px; margin: 0 0 28px; }
+    .offer-body { flex-grow: 0 !important; }
+    .offer-list { margin-bottom: 26px !important; }
   </style>
 </head>
 <body>
@@ -552,24 +563,6 @@
     </div>
   </div>
 
-  <!-- PHOTO SYMBOLIQUE -->
-  <div class="symbolic-photo-band">
-    <div class="symbolic-photo">
-      <div class="symbolic-triptych">
-        <div class="photo-frame">
-          <img class="bw" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, noir et blanc" />
-        </div>
-        <div class="photo-frame">
-          <img src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, couleur d'origine" />
-        </div>
-        <div class="photo-frame">
-          <img class="gold" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, tons dorés" />
-        </div>
-      </div>
-      <p class="caption">Nénuphars, jardin de Giverny, 2019 — photographie personnelle (originale, au centre).<br>Sans le contexte et sans la lecture du détail, difficile de savoir ce que l'on regarde vraiment.<br>C'est exactement ce que nous faisons avec votre situation : contacter les détails tout en ayant la connaissance du contexte général et en variant les filtres de perception.</p>
-    </div>
-  </div>
-
   <!-- OFFRES -->
   <div class="offers-section" id="offers">
     <div class="offers-inner">
@@ -586,15 +579,15 @@
             <li>Vos enjeux actuels et vos angles morts</li>
             <li>Une lecture du tangible et de l'intangible</li>
             <li>1 heure, en visio ou en présentiel</li>
-            <li>90 €</li>
           </ul>
-          <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Réserver une Context Reading →</a>
+          <p class="offer-tagline">Une séance, un éclairage. Vous repartez avec une direction claire et une première décision à portée de main.</p>
+          <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Réserver une Context Reading · 90 € TTC →</a>
         </div>
 
         <div class="offer-card offer-card-boost">
           <div class="offer-tag offer-tag-boost">Scan Boost</div>
           <div class="offer-name">100 jours : un détonateur, puis un entraînement progressif</div>
-          <p class="offer-body">Vous lancez un projet, vous changez de cap, ou vous êtes face à un vrai tournant. Et vous êtes à l’arrêt. En 100 jours, on désamorce ce qui bloque, on dégage votre trajectoire, et vous vous y consacrez, sans doute ni regret.</p>
+          <p class="offer-body">Un projet, un changement de cap, un vrai tournant. Vous voulez faire la différence maintenant et éviter de tourner en rond ou de vous disperser encore deux ans, cinq ans, voire dix ans. En 100 jours, vous décodez votre contexte, vous triez ce qui vous porte, et vous prenez vos premières décisions, sans regret.</p>
           <ul class="offer-list offer-list-boost">
             <li>Scan, jours 1 à 10 : le diagnostic laser de votre situation</li>
             <li>Boost, jours 11 à 100 : vous vous installez dans votre solution, vous vous entraînez à décider et à faire des choix délibérés</li>
@@ -638,6 +631,24 @@
   </div>
 
 
+  <!-- PHOTO SYMBOLIQUE -->
+  <div class="symbolic-photo-band">
+    <div class="symbolic-photo">
+      <div class="symbolic-triptych">
+        <div class="photo-frame">
+          <img class="bw" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, noir et blanc" />
+        </div>
+        <div class="photo-frame">
+          <img src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, couleur d'origine" />
+        </div>
+        <div class="photo-frame">
+          <img class="gold" src="nenuphars.jpg" alt="Nénuphars, jardin de Giverny, tons dorés" />
+        </div>
+      </div>
+      <p class="caption">Nénuphars, jardin de Giverny, 2019 — photographie personnelle (originale, au centre).<br>Sans le contexte et sans la lecture du détail, difficile de savoir ce que l'on regarde vraiment.<br>C'est exactement ce que nous faisons avec votre situation : capter les détails tout en ayant la connaissance du contexte général et en variant les filtres de perception.</p>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <div class="about-split">
     <div class="about-photo">
@@ -656,7 +667,7 @@
 
   <footer>
     © Véronique Pagnon · Context Consulting &nbsp;·&nbsp; Palma, Spain &nbsp;·&nbsp; <a href="mailto:contact@yourcontextconsulting.com">contact@yourcontextconsulting.com</a><br>
-    Photos : Isabelle Martin
+    Photos : Isabelle Martin &nbsp;·&nbsp; <a href="mentions-legales.html">Mentions légales</a>
   </footer>
 
 </body>
