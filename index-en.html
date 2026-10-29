@@ -471,6 +471,19 @@
       .method-photo { order: -1; max-width: 280px; margin: 0 auto; }
       .about-split { grid-template-columns: 1fr; }
     }
+    /* Photo Qui je suis calée sur le texte, du sous-titre à la fin (29/10/2026) */
+    .about-split { align-items: stretch; row-gap: 0; }
+    .about-head { grid-column: 2; grid-row: 1; }
+    .about-photo { grid-column: 1; grid-row: 2; margin: 0; }
+    .about-photo .photo-frame { height: 100%; min-height: 360px; }
+    .about-body { grid-column: 2; grid-row: 2; }
+    .about-body p:first-child { margin-top: 0; }
+    .about-body p:last-child { margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .about-head, .about-photo, .about-body { grid-column: 1; grid-row: auto; }
+      .about-photo { margin-bottom: 24px; }
+      .about-photo .photo-frame { height: 400px; }
+    }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap">
   <style>
@@ -504,6 +517,9 @@
     .offer-tagline { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.5; color: #d2c98a; border-left: 2px solid #d2c98a; padding-left: 14px; margin: 0 0 28px; }
     .offer-body { flex-grow: 0 !important; }
     .offer-list { margin-bottom: 26px !important; }
+    /* Phrase de fin sur la carte Scan Boost (29/10/2026) */
+    .offer-card-boost .offer-tagline { margin-top: auto; margin-bottom: 18px !important; color: #ea8790; border-left-color: #ea8790; }
+    .offer-card-boost .offer-btn { margin-top: 0; }
   </style>
 </head>
 <body>
@@ -561,14 +577,13 @@
         <p>The way you move forward: in your body, in your choices, in front of others. A presence that adjusts, and rebounds that carry you further.</p>
       </div>
     </div>
-    <p style="margin-top: 24px;">I read your context. You decide. Choice by choice, you design a way of moving that holds.</p>
   </div>
 
-  <!-- CITATION ALLURE -->
+  <!-- BANDEAU CONTEXTE -->
   <div class="quote-band" style="margin-top: 80px;">
     <div class="quote-band-inner">
-      <p class="quote-band-question">“A way of moving that holds, whatever comes.”</p>
-      <p class="quote-band-answer">Presence. Rebounds. Poise.</p>
+      <p class="quote-band-question">“I read your context. You decide, with no regrets.”</p>
+      <p class="quote-band-answer">And you move in the direction you choose.</p>
     </div>
   </div>
 
@@ -587,7 +602,7 @@
   <!-- OFFERS -->
   <div class="offers-section" id="offers">
     <div class="offers-inner">
-      <p class="offers-punch">Being stuck doesn't stop you from moving forward.<br><span>The next decade starts now.</span></p>
+      <p class="offers-punch">Being stuck doesn't stop you from moving forward.</p>
       <div class="offers-label" style="text-align: center; font-size: 22px;">Two ways to act</div>
       <div class="offers-grid">
 
@@ -617,6 +632,7 @@
             <li>Bonus: a video pathway, and your decision-making profile analysed</li>
             <li>Online or in person</li>
           </ul>
+          <p class="offer-tagline">The next decade starts now.</p>
           <a href="https://cal.com/veroniquepagnon/scanboost" target="_blank" rel="noopener" class="offer-btn offer-btn-boost">Book a call →</a>
         </div>
 
@@ -670,6 +686,14 @@
     </div>
   </div>
 
+  <!-- CITATION ALLURE -->
+  <div class="quote-band">
+    <div class="quote-band-inner">
+      <p class="quote-band-question">“Keep your poise, whatever comes.”</p>
+      <p class="quote-band-answer">Presence. Rebounds. Decisions.</p>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <div class="about-split">
     <div class="about-photo">
@@ -677,9 +701,11 @@
         <img src="portrait-about.jpg" alt="Véronique Pagnon" />
       </div>
     </div>
-    <div>
+    <div class="about-head">
       <div class="section-label">Who I am</div>
       <h2>Véronique Pagnon</h2>
+    </div>
+    <div class="about-body">
       <p><strong>Specialist in context analysis and talent activation for life transitions.</strong></p>
       <p>I work as a profiler and a trainer. I profile your personal design and your situation. Together, we widen the frame: new opportunities take shape, and we activate your talents to seize them. Then I train you for the situations of today and those to come.</p>
       <p>I founded the Context Consulting method at a time when life transitions are accelerating and multiplying, to bring together in a coherent approach the tools I know best. I have been practising it for eight years.</p>

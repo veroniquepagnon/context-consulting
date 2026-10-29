@@ -480,6 +480,19 @@
       .method-photo { order: -1; max-width: 280px; margin: 0 auto; }
       .about-split { grid-template-columns: 1fr; }
     }
+    /* Photo Qui je suis calée sur le texte, du sous-titre à la fin (29/10/2026) */
+    .about-split { align-items: stretch; row-gap: 0; }
+    .about-head { grid-column: 2; grid-row: 1; }
+    .about-photo { grid-column: 1; grid-row: 2; margin: 0; }
+    .about-photo .photo-frame { height: 100%; min-height: 360px; }
+    .about-body { grid-column: 2; grid-row: 2; }
+    .about-body p:first-child { margin-top: 0; }
+    .about-body p:last-child { margin-bottom: 0; }
+    @media (max-width: 768px) {
+      .about-head, .about-photo, .about-body { grid-column: 1; grid-row: auto; }
+      .about-photo { margin-bottom: 24px; }
+      .about-photo .photo-frame { height: 400px; }
+    }
   </style>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap">
   <style>
@@ -513,6 +526,9 @@
     .offer-tagline { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.5; color: #d2c98a; border-left: 2px solid #d2c98a; padding-left: 14px; margin: 0 0 28px; }
     .offer-body { flex-grow: 0 !important; }
     .offer-list { margin-bottom: 26px !important; }
+    /* Phrase de fin sur la carte Scan Boost (29/10/2026) */
+    .offer-card-boost .offer-tagline { margin-top: auto; margin-bottom: 18px !important; color: #ea8790; border-left-color: #ea8790; }
+    .offer-card-boost .offer-btn { margin-top: 0; }
   </style>
 </head>
 <body>
@@ -569,14 +585,13 @@
         <p>La façon dont vous avancez : dans votre corps, dans vos choix, devant les autres. Une présence qui s'ajuste, et des rebonds qui vous portent plus loin.</p>
       </div>
     </div>
-    <p style="margin-top: 24px;">Je lis votre contexte. Vous décidez. De choix en choix, vous vous designez une allure qui tient.</p>
   </div>
 
-  <!-- CITATION ALLURE -->
+  <!-- BANDEAU CONTEXTE -->
   <div class="quote-band" style="margin-top: 80px;">
     <div class="quote-band-inner">
-      <p class="quote-band-question">« Une allure qui tient, quels que soient les aléas. »</p>
-      <p class="quote-band-answer">Présence. Rebonds. Allure.</p>
+      <p class="quote-band-question">« Je lis votre contexte. Vous décidez sans regret. »</p>
+      <p class="quote-band-answer">Et vous avancez dans la direction que vous choisissez.</p>
     </div>
   </div>
 
@@ -595,7 +610,7 @@
   <!-- OFFRES -->
   <div class="offers-section" id="offers">
     <div class="offers-inner">
-      <p class="offers-punch">Être bloqué n'empêche pas d'avancer.<br><span>La prochaine décennie se prépare maintenant.</span></p>
+      <p class="offers-punch">Être bloqué n'empêche pas d'avancer.</p>
       <div class="offers-label" style="text-align: center; font-size: 22px;">Deux façons d'agir</div>
       <div class="offers-grid">
 
@@ -625,6 +640,7 @@
             <li>En bonus : un parcours vidéo, et votre profil décisionnel analysé</li>
             <li>En visio ou en présentiel</li>
           </ul>
+          <p class="offer-tagline">La prochaine décennie se prépare maintenant.</p>
           <a href="scan-boost.html" class="offer-btn offer-btn-boost">Découvrir Scan Boost →</a>
         </div>
 
@@ -678,6 +694,14 @@
     </div>
   </div>
 
+  <!-- CITATION ALLURE -->
+  <div class="quote-band">
+    <div class="quote-band-inner">
+      <p class="quote-band-question">« De l’allure, quels que soient les aléas&nbsp;! »</p>
+      <p class="quote-band-answer">Présence. Rebonds. Décisions.</p>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <div class="about-split">
     <div class="about-photo">
@@ -685,9 +709,11 @@
         <img src="portrait-about.jpg" alt="Véronique Pagnon" />
       </div>
     </div>
-    <div>
+    <div class="about-head">
       <div class="section-label">Qui je suis</div>
       <h2>Véronique Pagnon</h2>
+    </div>
+    <div class="about-body">
       <p><strong>Spécialiste de l'analyse de contexte et de l'activation des talents pour les transitions de vie.</strong></p>
       <p>Je travaille comme une profileuse et une entraîneuse. Je profile votre design personnel et votre situation. Ensemble, on élargit le cadre : de nouvelles opportunités se profilent, et on active vos talents pour les saisir. Puis je vous entraîne pour les situations d'aujourd'hui et celles qui viennent.</p>
       <p>J'ai fondé la méthode Context Consulting au moment où les transitions de vie s'accélèrent et se multiplient, pour rassembler en une approche cohérente les outils que je maîtrise le mieux. Je la pratique depuis huit ans.</p>
