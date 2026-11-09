@@ -520,6 +520,37 @@
     /* Phrase de fin sur la carte Scan Boost (29/10/2026) */
     .offer-card-boost .offer-tagline { margin-top: auto; margin-bottom: 18px !important; color: #ea8790; border-left-color: #ea8790; }
     .offer-card-boost .offer-btn { margin-top: 0; }
+    /* Two moments, stacked, no imposed order (04/11/2026) */
+    .offers-grid { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; gap: 0; }
+    .offer-name, .offer-body { min-height: 0; }
+    .offer-step { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; color: #f5f0e8; opacity: 0.75; margin-bottom: 16px; }
+    .offer-link { text-align: center; padding: 26px 0; font-family: 'Jost', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; color: #f5f0e8; }
+    .offer-link::before { content: ""; display: block; width: 1px; height: 28px; background: #d2c98a; margin: 0 auto 14px; }
+    .offer-link::after { content: ""; display: block; width: 1px; height: 28px; background: #ea8790; margin: 14px auto 0; }
+  </style>
+
+  <style>
+    /* Témoignages (09/11/2026) : avis Trustpilot, sous les offres */
+    .reviews { background: #faf8f5; padding: 72px 24px 80px; }
+    .reviews-inner { max-width: 1040px; margin: 0 auto; }
+    .reviews-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 24px; margin-bottom: 36px; }
+    .reviews-head h2 { margin-bottom: 0; }
+    .reviews-score { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 14px; letter-spacing: 0.08em; color: #5a6b58; }
+    .reviews-score .stars { color: #c9a24a; letter-spacing: 2px; margin-right: 8px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .review { background: #ffffff; border-top: 2px solid #8a9e88; padding: 28px 26px 26px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(30, 40, 32, 0.06); }
+    .review .stars { color: #c9a24a; letter-spacing: 3px; font-size: 15px; margin-bottom: 16px; }
+    .review blockquote { font-family: 'Georgia', serif; font-style: italic; font-size: 17px; line-height: 1.7; color: #2c2c2c; margin: 0 0 22px; flex-grow: 1; }
+    .review-who { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 500; color: #1e2820; }
+    .review-tag { display: inline-block; margin-top: 8px; font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #8a9e88; }
+    .review-note { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 12px; color: #8b8b8b; margin-top: 4px; }
+    .reviews-more { margin-top: 32px; text-align: center; font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 14px; letter-spacing: 0.08em; }
+    .reviews-more a { color: #2a3830; border-bottom: 1px solid #8a9e88; padding-bottom: 2px; }
+    .reviews-more a:hover { color: #8a9e88; }
+    .review-title { font-family: 'Jost', 'Helvetica Neue', sans-serif; font-size: 17px; font-weight: 500; color: #1e2820; margin: 0 0 12px; line-height: 1.35; }
+    .review blockquote { font-size: 16px !important; line-height: 1.75 !important; }
+    .reviews-grid { gap: 28px !important; }
+    .reviews-inner { max-width: 1120px !important; }
   </style>
 </head>
 <body>
@@ -550,6 +581,7 @@
     <div class="situations-inner">
       <div class="situations-label">What you are experiencing</div>
       <ul class="situations-list">
+        <li>You are flying blind through a transition, and you want to see your present clearly: shed light on the grey areas, make your decisions, find your footing</li>
         <li>You are going through a life or professional transition and you want to give it new momentum</li>
         <li>You are stuck, going around in circles for a long time without making the strategic decision you are hoping for</li>
         <li>You feel that your vision and your ambition have been resting for too long</li>
@@ -603,10 +635,11 @@
   <div class="offers-section" id="offers">
     <div class="offers-inner">
       <p class="offers-punch">Projects need structure. <span>So do transitions.</span></p>
-      <div class="offers-label" style="text-align: center; font-size: 22px;">Two ways to act</div>
+      <div class="offers-label" style="text-align: center; font-size: 22px;">Depending on your moment</div>
       <div class="offers-grid">
 
         <div class="offer-card offer-card-clarity">
+          <div class="offer-step">A question, right now</div>
           <div class="offer-tag offer-tag-clarity">Context Reading</div>
           <div class="offer-name">1 hour to shed light on a decisive moment</div>
           <p class="offer-body">A decision to make now, or a need to understand what is at play around you? I read your context: the stakes of the moment, the blind spots, what carries you and what holds you back.</p>
@@ -620,7 +653,10 @@
           <a href="https://cal.com/veroniquepagnon/context-reading" target="_blank" rel="noopener" class="offer-btn offer-btn-clarity">Book a Context Reading · €90 VAT incl. →</a>
         </div>
 
+        <p class="offer-link">or</p>
+
         <div class="offer-card offer-card-boost">
+          <div class="offer-step">A transition to structure</div>
           <div class="offer-tag offer-tag-boost">Scan Boost</div>
           <div class="offer-name">100 days: a detonator, then progressive training</div>
           <p class="offer-body">A project, a change of course, a real turning point. You want to make a difference now and avoid going round in circles or scattering your energy for another two years, five years, or even ten years. In 100 days, you decode your context, sort out what carries you, and make your first decisions, with no regrets.</p>
@@ -637,6 +673,44 @@
         </div>
 
       </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS (Trustpilot, 09/11/2026) -->
+  <div class="reviews" id="reviews">
+    <div class="reviews-inner">
+      <div class="section-label">What clients say</div>
+      <div class="reviews-head">
+        <h2>Reviews</h2>
+        <div class="reviews-score"><span class="stars">★★★★★</span>Verified reviews on Trustpilot</div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-title">Clear, sharp and very insightful</p>
+          <blockquote>"I booked a session with Véronique at a point where I'd been going back and forth on a big decision for months. She picked up on things in the way I was describing my situation that I hadn't noticed myself, and within the hour she'd pointed out a couple of blind spots that were clearly keeping me stuck. What I liked most is that she doesn't tell you what to do. She lays out what's going on around you, what's helping and what's holding you back, and then the decision is yours. I left with a much clearer head and one concrete next step, which I took the following week."</blockquote>
+          <div class="review-who">Alexandra</div>
+          <div class="review-tag">Context Reading</div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-title">Precious, high-quality support</p>
+          <blockquote>"I've had several sessions with Véronique. She is very caring, professional and very generous with what she shares, in time and in energy. She is deeply respectful of the very personal subjects I bring to her. I have never felt judged, and that allowed me to feel confident and safe. She brings me a great deal of clarity, and from that clarity, I've been able to keep moving forward. Her support is truly precious to me."</blockquote>
+          <div class="review-who">Amel, Belgium</div>
+          <div class="review-note">Translated from French</div>
+          <div class="review-tag">Regular sessions</div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-title">A gift for shedding light</p>
+          <blockquote>"Véronique has a gift for shedding light, for awakening in us what is already on its way. She makes us aware of our values, our creative possibilities, what is right for us. I turned to her at a time when I was going through difficulties in a relationship. [...] My life and that relationship have changed radically. It isn't magic, it's a new understanding of oneself. It brings confidence."</blockquote>
+          <div class="review-who">Delphine M.</div>
+          <div class="review-note">Translated from French</div>
+          <div class="review-tag">Individual session</div>
+        </div>
+        <!-- Slots for Scan Boost reviews (Pascale, Frédérique): same format, tag "Scan Boost". -->
+      </div>
+      <p class="reviews-more"><a href="https://fr.trustpilot.com/review/yourcontextconsulting.com?languages=all" target="_blank" rel="noopener">Read the full reviews on Trustpilot →</a></p>
     </div>
   </div>
 
